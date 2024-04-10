@@ -1,0 +1,29 @@
+// Dashboard Container
+div#dashboard-container
+    // User Info Box
+    div.dashboard-box.user-info
+        h2 User Info
+        // Display username
+        p= username
+
+    // Main Dashboard Box
+    div#main-dashboard-box
+        // Enterprise Activities Box
+        div.dashboard-box.activities
+            h2 Activities
+            // Links to enterprise activities
+            button(type="button", class="dashboard-button") M Keen Enterprises
+            // Add more buttons dynamically using database interactions
+
+        // Executive Functions Box
+        div.dashboard-box.functions
+            h2 Executive Functions
+            // Links to executive functions
+            // Add more buttons dynamically using database interactions
+
+        // Bulletin Board Box
+        div.dashboard-box.bulletin-board
+            h2 Bulletin Board
+            // Display bulletin board feed
+            // Add microblog functionality here
+

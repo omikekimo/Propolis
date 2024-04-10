@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'Lucid Type A (BRK)';
+  src: url('/fonts/lucid.ttf') format('truetype');
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #00ff00;  
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer, section {
+    padding: 2px;
+    margin: 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+/* Adjusted styling for the sidebar */
+nav {
+    width: 10%;
+    border: 1px solid #ccc;
+    margin: 1px;
+    padding: 2px;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Adjusted styling for the main content area */
+section {
+    flex: 1; /* Take up the remaining space in the main area */
+    border: 1px solid #ccc;
+    margin: 1px;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+/* Apply CSS styles for the header */
+#header-container {
+  background-color: #ffffff; /* Set your desired background color */
+  padding: 10px;
+  margin:
+}
+
+#logo-text-container {
+  display: flex;
+  align-items: right;
+}
+
+#header-logo {
+  width: 90px; /* Set your desired width */
+  height: auto;
+}
+
+#header-text {
+  color: black; /* Set your desired text color */
+  margin-left: 10px; /* Add spacing between logo and text */
+  font-family: 'Lucid Type A (BRK)', sans-serif; /* Fallback to a generic sans-serif*/
+  font-size: 400%;
+}
+
+#logo-text-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends of the container */
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Style for form labels */
+#login-form label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add some spacing below labels */
+}
+
+/* Style for form inputs */
+#login-form input {
+  width: 100%; /* Make inputs fill the entire width of their container */
+  padding: 4px; /* Add padding to inputs */
+  border-radius: 5px; /* Add some border radius to inputs */
+  border: 1px solid #ccc; /* Add a border to inputs */
+}
+
+/* Style for the Login button */
+#login-form button {
+  width: 100%; /* Make button fill the entire width of its container */
+  padding: 4px; /* Add padding to button */
+  border-radius: 5px; /* Add some border radius to button */
+  border: none; /* Remove default button border */
+  background-color: #007bff; /* Set button background color */
+  color: #fff; /* Set button text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style for the Login button on hover */
+#login-form button:hover {
+  background-color: #0056b3; /* Darken background color on hover */
+}
+
+
+#header-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends of the container */
+    align-items: center; /* Align items vertically centered */
+}
+
+#logo-text-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+}
+
+#login-container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+}
+
+/* Style for form-group divs within the registration form container */
+#register-form-container .form-group {
+  margin-bottom: 20px; /* Add some spacing between form groups */
+}
+
+/* Style for form labels */
+#register-form-container label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add some spacing below labels */
+}
+
+/* Style for form inputs */
+#register-form-container input {
+  width: 100%; /* Make inputs fill the entire width of their container */
+  padding: 10px; /* Add padding to inputs */
+  border-radius: 5px; /* Add some border radius to inputs */
+  border: 1px solid #ccc; /* Add a border to inputs */
+}
+
+/* Style for the Register button */
+#register-form-container button {
+  width: 100%; /* Make button fill the entire width of its container */
+  padding: 10px; /* Add padding to button */
+  border-radius: 5px; /* Add some border radius to button */
+  border: none; /* Remove default button border */
+  background-color: #007bff; /* Set button background color */
+  color: #fff; /* Set button text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style for the Register button on hover */
+#register-form-container button:hover {
+  background-color: #0056b3; /* Darken background color on hover */
+}
+
+.sidebar-list-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-list-links li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ffffff, #007bff);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    width: 60%;
+}
+
+.sidebar-list-links li a:hover {
+    background: linear-gradient(to bottom, #0056b3, #ffffff);
+    border-color: #007bff;
+    color: #007bff;
+}
+
+/* Style for the dashboard container */
+#dashboard-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Style for the user info box */
+.user-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for the main dashboard box */
+#main-dashboard-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style for the dashboard boxes */
+.dashboard-box {
+    flex-basis: calc(33.33% - 10px); /* Three columns with a small gap */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style for the dashboard buttons */
+.dashboard-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.dashboard-button:hover {
+    background-color: #0056b3;
+}
