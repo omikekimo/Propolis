@@ -11,7 +11,7 @@ const createError = require('http-errors');
 const flash = require('connect-flash');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const membersRouter = require('./routes/members');
 const aboutRouter = require('./routes/about');
 const registerRouter = require('./routes/register');
 const worklifeRouter = require('./routes/worklife');
@@ -63,7 +63,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(
     (username, password, done) => {
         // Query the database to find the user with the given username
-        db.query('SELECT * FROM users WHERE username = ?', [username], (err, results) => {
+        db.query('SELECT * FROM members WHERE username = ?', [username], (err, results) => {
             if (err) { return done(err); }
             if (results.length === 0) { return done(null, false, { message: 'Incorrect username.' }); }
             const user = results[0];
@@ -82,12 +82,12 @@ passport.use(new LocalStrategy(
 
 // Serialize user object
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+    done(null, user.member_id);
 });
 
 // Deserialize user object
 passport.deserializeUser((id, done) => {
-    db.query('SELECT * FROM users WHERE id = ?', [id], (err, results) => {
+    db.query('SELECT * FROM members WHERE member_id = ?', [id], (err, results) => {
         if (err) { return done(err); }
         const user = results[0];
         done(null, user);
@@ -96,7 +96,7 @@ passport.deserializeUser((id, done) => {
 
 app.use('/about', aboutRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/members', membersRouter);
 app.use('/register', registerRouter);
 app.use('/worklife', worklifeRouter);
 app.use('/personal', personalRouter);

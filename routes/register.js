@@ -28,7 +28,7 @@ router.post('/', (req, res, next) => {
   }
 
   // Check if username already exists
-  db.query('SELECT * FROM users WHERE username = ?', [username], (err, results) => {
+  db.query('SELECT * FROM members WHERE username = ?', [username], (err, results) => {
     if (err) {
       return next(err);
     }
@@ -45,7 +45,7 @@ router.post('/', (req, res, next) => {
       }
 
       // Insert the user into the database
-      db.query('INSERT INTO users (username, password) VALUES (?, ?)', [username, hashedPassword], (err, results) => {
+      db.query('INSERT INTO members (username, password) VALUES (?, ?)', [username, hashedPassword], (err, results) => {
         if (err) {
           return next(err);
         }
