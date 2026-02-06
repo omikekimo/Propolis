@@ -1,5 +1,7 @@
 # Sustaining Propolis
 
+![Figure 2: A conceptual map of Propolis](propolisoperations.png)
+
 ## Base Economic Functions
 
 Propolis aims to be a versatile structure that can be applied to many 
